@@ -1,0 +1,8 @@
+@import 'tailwindcss';
+html {
+  scroll-behavior: smooth;
+}
+/* Deja un margen superior automático para que el menú fijo no tape el contenido */
+section[id] {
+  scroll-margin-top: 130px; /* Ajusta este valor si la barra es más alta o más baja */
+}
