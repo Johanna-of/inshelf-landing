@@ -22,9 +22,10 @@ export const HowItWorksSection: React.FC = () => {
                 Lo que medimos
               </span>
             </div>
-            <h2 className="mb-6 text-3xl leading-tight font-extrabold tracking-tight text-[#152136] sm:text-4xl lg:text-5xl">
-              Seis motores. Cada visita. <br className="hidden sm:inline" />
-              Cada punto de venta.
+            <h2 className="mb-6 text-3xl leading-tight font-extrabold tracking-tight text-[#152136] sm:text-4xl">
+              Seis motores que aseguran el sell out,{' '}
+              <br className="hidden sm:inline" />
+              en cada visita y en cada punto de venta.
             </h2>
             <p className="text-base leading-relaxed text-slate-600 sm:text-lg">
               Una góndola bien ejecutada responde seis preguntas. InShelf las
