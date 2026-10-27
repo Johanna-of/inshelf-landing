@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import whatsappIcon from '@/assets/icono-what.webp';
 import emailjs from '@emailjs/browser';
 
 export const ContactSection: React.FC = () => {
