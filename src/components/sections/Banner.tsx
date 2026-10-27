@@ -35,9 +35,9 @@ export const Banner: React.FC = () => {
 
         {/* Titular Principal Impactante */}
         <h1 className="mb-6 text-4xl leading-tight font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
-          Cada hueco en la góndola es
+          Cada hueco en la góndola
           <br />
-          una venta que se lleva{' '}
+          es una venta que se lleva{' '}
           <span className="block text-[#ff5743]">tu competencia.</span>
         </h1>
 
