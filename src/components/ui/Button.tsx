@@ -28,7 +28,7 @@ export const Button: React.FC<ButtonProps> = ({
 
     // Botón secundario (mismo padding responsivo)
     secondary:
-      'border border-slate-400/50 bg-[#152136]/50 text-white hover:bg-slate-800/80 hover:border-slate-300 shadow-none px-6 py-3 text-base sm:text-lg lg:text-xl font-bold hover:-translate-y-0.5 transition-all text-center',
+      'border border-slate-400/50 bg-[#152136]/50 text-white hover:bg-[#152136]/50 hover:border-sky-400 hover:text-white shadow-none px-6 py-3 text-base sm:text-lg lg:text-xl font-bold hover:-translate-y-0.5 transition-all text-center',
 
     outline:
       'border border-slate-700 text-slate-300 hover:text-white hover:border-slate-500 shadow-none text-center',

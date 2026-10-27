@@ -1,9 +1,20 @@
 import React from 'react';
+import bannerImage from '@/assets/Banner-2-frase.png';
 
 export const ExecutionSection: React.FC = () => {
   return (
-    <section className="border-b border-[#1e2f4d]/60 bg-[#152136] px-4 py-24 text-white sm:px-8 lg:px-12">
-      <div className="mx-auto max-w-4xl text-center">
+    <section className="relative overflow-hidden border-b border-[#1e2f4d]/60 bg-[#152136] px-4 py-24 text-white sm:px-8 lg:px-12">
+      {/* IMAGEN DE FONDO Y CAPA OSCURA */}
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        <img
+          src={bannerImage}
+          alt="Fondo de la sección"
+          className="h-full w-full object-cover object-center"
+        />
+      </div>
+
+      {/* CONTENIDO PRINCIPAL */}
+      <div className="relative z-10 mx-auto max-w-4xl text-center">
         {/* Título principal */}
         <h2 className="mb-6 text-4xl leading-tight font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
           Saber qué hacer no es el problema.{' '}

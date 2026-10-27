@@ -19,8 +19,8 @@ export const HEXAGON_VARIABLES: HexagonVariable[] = [
     desc: '¿Está tu producto en el anaquel, con los frentes acordados?',
     x: 270,
     y: 80,
-    textX: 285,
-    textY: 75,
+    textX: 240, // Movido más a la derecha
+    textY: 40, // Ajustado hacia arriba
     textAnchor: 'start',
     prevId: 'activacion',
   },
@@ -31,8 +31,8 @@ export const HEXAGON_VARIABLES: HexagonVariable[] = [
     desc: '¿Se exhibe al precio pactado y bien marcado?',
     x: 270,
     y: 180,
-    textX: 285,
-    textY: 185,
+    textX: 295, // Movido más a la derecha
+    textY: 140, // Ajustado hacia abajo
     textAnchor: 'start',
     prevId: 'disponibilidad',
   },
@@ -43,8 +43,8 @@ export const HEXAGON_VARIABLES: HexagonVariable[] = [
     desc: '¿Está en buen estado, limpio y dentro de fecha?',
     x: 180,
     y: 230,
-    textX: 220,
-    textY: 255,
+    textX: 240, // Separado del vértice inferior derecho
+    textY: 233, // Bajado para darle aire
     textAnchor: 'start',
     prevId: 'precio',
   },
@@ -55,8 +55,8 @@ export const HEXAGON_VARIABLES: HexagonVariable[] = [
     desc: '¿Está en el nivel y la ubicación negociados con la cadena?',
     x: 90,
     y: 180,
-    textX: 140,
-    textY: 255,
+    textX: 120, // Separado del vértice inferior izquierdo
+    textY: 230, // Bajado para darle aire
     textAnchor: 'end',
     prevId: 'calidad',
   },
@@ -67,8 +67,8 @@ export const HEXAGON_VARIABLES: HexagonVariable[] = [
     desc: '¿La promoción vigente se cumple en el punto de venta?',
     x: 90,
     y: 80,
-    textX: 75,
-    textY: 185,
+    textX: 65, // Movido más a la izquierda
+    textY: 140, // Ajustado
     textAnchor: 'end',
     prevId: 'visibilidad',
   },
@@ -79,8 +79,8 @@ export const HEXAGON_VARIABLES: HexagonVariable[] = [
     desc: '¿La activación planeada se ejecutó como se diseñó?',
     x: 180,
     y: 30,
-    textX: 140,
-    textY: 45,
+    textX: 115, // Movido más a la izquierda
+    textY: 39, // Ajustado
     textAnchor: 'end',
     prevId: 'promocion',
   },

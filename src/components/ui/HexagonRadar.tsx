@@ -144,7 +144,7 @@ export const HexagonRadar: React.FC<HexagonRadarProps> = ({
               x={v.textX}
               y={v.textY}
               textAnchor={v.textAnchor}
-              className={`cursor-pointer text-[11px] transition-all duration-200 ${
+              className={`cursor-pointer text-[14px] transition-all duration-200 ${
                 isActive
                   ? 'fill-[#ff5743] font-black'
                   : 'fill-[#152136] font-bold'

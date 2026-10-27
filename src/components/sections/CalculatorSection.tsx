@@ -59,7 +59,7 @@ export const CalculatorSection: React.FC = () => {
         <div className="mb-12 max-w-3xl">
           <div className="mb-4 flex items-center gap-3">
             <span className="h-px w-8 bg-[#ff5743]"></span>
-            <span className="text-xs font-bold tracking-widest text-[#ff5743] uppercase">
+            <span className="text-lg font-bold tracking-widest text-[#ff5743] uppercase">
               Calculadora
             </span>
           </div>
@@ -269,135 +269,6 @@ export const CalculatorSection: React.FC = () => {
                     : 'Copiar para mi equipo'}
                 </Button>
               </div>
-            </div>
-          </div>
-        </div>
-
-        {/* ========================================================= */}
-        {/* SECCIÓN: TU EQUIPO DE CAMPO (COMPARATIVA + ROLES) */}
-        {/* ========================================================= */}
-        <div className="mt-28">
-          {/* Cabecera de la sección y Tabla Comparativa sin caja blanca */}
-          <div className="mb-16 grid grid-cols-1 items-start gap-12 lg:grid-cols-12">
-            <div className="lg:col-span-6">
-              <div className="mb-4 flex items-center gap-3">
-                <span className="h-px w-8 bg-[#ff5743]"></span>
-                <span className="text-xs font-bold tracking-widest text-[#ff5743] uppercase">
-                  Tu equipo de campo
-                </span>
-              </div>
-              <h2 className="mb-6 text-3xl leading-tight font-extrabold tracking-tight text-[#152136] sm:text-4xl lg:text-5xl">
-                Cada visita de tu equipo{' '}
-                <span className="text-[#ff5743]">
-                  vale más cuando se puede medir.
-                </span>
-              </h2>
-              <p className="text-base leading-relaxed text-slate-600 sm:text-lg">
-                InShelf es tecnología y analítica. Tu equipo, propio o
-                tercerizado, sigue siendo tuyo. Lo que cambia es que cada visita
-                queda registrada, se puede comparar y se convierte en
-                información para decidir.
-              </p>
-            </div>
-
-            {/* Tabla comparativa con letra aumentada */}
-            <div className="lg:col-span-6">
-              <div className="grid grid-cols-2 border-b-2 border-slate-900 pb-4 text-xs font-extrabold tracking-wider text-slate-500 uppercase sm:text-sm">
-                <div>Hoy</div>
-                <div>Con InShelf</div>
-              </div>
-
-              <div className="divide-y divide-slate-200">
-                <div className="grid grid-cols-2 gap-4 py-4 text-sm sm:text-base">
-                  <div className="text-slate-500">
-                    Reportes por chat, fotos sueltas y planillas
-                  </div>
-                  <div className="font-bold text-[#152136]">
-                    Un solo registro por visita, con evidencia
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-2 gap-4 py-4 text-sm sm:text-base">
-                  <div className="text-slate-500">
-                    Te enteras del agotado en el informe del mes
-                  </div>
-                  <div className="font-bold text-[#152136]">
-                    Lo ves en la torre de control al cerrar la visita
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-2 gap-4 py-4 text-sm sm:text-base">
-                  <div className="text-slate-500">
-                    Cada proveedor de campo reporta a su manera
-                  </div>
-                  <div className="font-bold text-[#152136]">
-                    Las mismas seis variables para todos
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-2 gap-4 py-4 text-sm sm:text-base">
-                  <div className="text-slate-500">
-                    El sell-out se explica después del cierre
-                  </div>
-                  <div className="font-bold text-[#152136]">
-                    La caída se anticipa y se corrige antes
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-2 gap-4 py-4 text-sm sm:text-base">
-                  <div className="text-slate-500">
-                    Decisiones por intuición del ejecutivo de cuenta
-                  </div>
-                  <div className="font-bold text-[#152136]">
-                    Prioridades ordenadas por impacto en la venta
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Tarjetas inferiores con líneas superiores independientes y oscuras */}
-          <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-3">
-            {/* Rol 1 */}
-            <div className="space-y-3 border-t border-slate-900 pt-6">
-              <span className="text-[13px] font-extrabold tracking-widest text-slate-400 uppercase">
-                Gerencia de Trade Marketing
-              </span>
-              <h3 className="text-lg leading-snug font-bold text-[#152136]">
-                Sabes si lo que planeaste se ejecutó.
-              </h3>
-              <p className="text-xs leading-relaxed text-slate-600 sm:text-sm">
-                Cumplimiento por variable, cadena y ciudad, con evidencia de
-                cada visita para defender tu inversión en el punto de venta.
-              </p>
-            </div>
-
-            {/* Rol 2 */}
-            <div className="space-y-3 border-t border-slate-900 pt-6">
-              <span className="text-[13px] font-extrabold tracking-widest text-slate-400 uppercase">
-                Gerencia Comercial y KAM
-              </span>
-              <h3 className="text-lg leading-snug font-bold text-[#152136]">
-                Llegas a la negociación con datos.
-              </h3>
-              <p className="text-xs leading-relaxed text-slate-600 sm:text-sm">
-                Agotados, precios y exhibición documentados por punto de venta
-                para conversar con cada cadena desde los hechos.
-              </p>
-            </div>
-
-            {/* Rol 3 */}
-            <div className="space-y-3 border-t border-slate-900 pt-6">
-              <span className="text-[13px] font-extrabold tracking-widest text-slate-400 uppercase">
-                Dirección General
-              </span>
-              <h3 className="text-lg leading-snug font-bold text-[#152136]">
-                Ves hacia dónde va la venta.
-              </h3>
-              <p className="text-xs leading-relaxed text-slate-600 sm:text-sm">
-                Una proyección de sell-out conectada con lo que pasa en la
-                calle, para decidir antes de que el mes esté perdido.
-              </p>
             </div>
           </div>
         </div>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import whatsappIcon from '@/assets/icono-what.webp';
 import emailjs from '@emailjs/browser';
 
 export const ContactSection: React.FC = () => {
@@ -12,6 +13,7 @@ export const ContactSection: React.FC = () => {
 
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [showPolicy, setShowPolicy] = useState(false); // Estado para abrir/cerrar el modal de políticas
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>,
@@ -51,7 +53,6 @@ export const ContactSection: React.FC = () => {
 
     setLoading(true);
 
-    // Parámetros que recibirá tu plantilla en EmailJS
     const templateParams = {
       from_name: formData.name,
       company: formData.company,
@@ -59,13 +60,12 @@ export const ContactSection: React.FC = () => {
       phone: formData.phone,
     };
 
-    // Reemplaza con tus claves reales de EmailJS
     emailjs
       .send(
-        'service_yg9y9tn', // Tu Service ID
-        'template_adeos02', // Tu Template ID
+        'service_yg9y9tn',
+        'template_adeos02',
         templateParams,
-        'Vu9krCROEJba1dNys', // Tu Public Key
+        'Vu9krCROEJba1dNys',
       )
       .then(
         (response) => {
@@ -145,16 +145,32 @@ export const ContactSection: React.FC = () => {
               </div>
             </div>
 
-            {/* WHATSAPP DIRECTO */}
-            <div className="pt-2 text-sm text-slate-400">
-              ¿Prefieres WhatsApp? Escríbenos al{' '}
+            {/* BOTÓN DE WHATSAPP */}
+            <div className="pt-4">
               <a
                 href="https://wa.me/573146361640"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-bold text-white underline decoration-[#ff5743] underline-offset-4 transition-colors hover:text-[#ff5743]"
+                className="inline-flex items-center gap-3 rounded-full border-2 border-[#ff5743] bg-transparent px-8 py-3.5 text-base font-medium text-white shadow-sm transition-all duration-300 hover:scale-[1.02] hover:shadow-md hover:shadow-[#ff5743]/30"
               >
-                +57 314 636 1640
+                <svg
+                  style={{ width: '32px', height: '32px', minWidth: '32px' }}
+                  className="fill-none stroke-white stroke-[1.0]"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M12 21.5c-1.65 0-3.23-.42-4.63-1.16L3 21.5l1.22-4.22A9.45 9.45 0 013 12.5C3 7.25 7.25 3 12.5 3S22 7.25 22 12.5 17.75 21.5 12 21.5z"
+                  />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M8.5 9.5c.2-.5.5-.5.8-.5h.6c.2 0 .4.1.5.4l.7 1.7c.1.2.1.4 0 .6l-.4.5c-.1.1-.2.3 0 .6.4.7 1.1 1.4 1.8 1.8.3.2.5.1.6 0l.5-.4c.2-.1.4-.1.6 0l1.7.7c.3.1.4.3.4.5v.6c0 .3 0 .6-.5.8-.5.2-1.6.4-3.5-.4-2.1-.9-3.8-2.6-4.7-4.7-.8-1.9-.6-3-.4-3.5z"
+                  />
+                </svg>
+                <span>Escríbenos al WhatsApp</span>
               </a>
             </div>
           </div>
@@ -289,14 +305,18 @@ export const ContactSection: React.FC = () => {
                     >
                       Autorizo a InShelf a tratar mis datos personales para
                       contactarme, conforme a la Ley 1581 de 2012 y su{' '}
-                      <span className="font-medium text-slate-700 underline">
+                      <button
+                        type="button"
+                        onClick={() => setShowPolicy(true)}
+                        className="font-medium text-slate-700 underline hover:text-[#ff5743] focus:outline-none"
+                      >
                         política de tratamiento de datos
-                      </span>
+                      </button>
                       .
                     </label>
                   </div>
 
-                  {/* Botón nativo con soporte completo para disabled */}
+                  {/* Botón de envío */}
                   <div className="pt-3">
                     <button
                       type="submit"
@@ -312,6 +332,209 @@ export const ContactSection: React.FC = () => {
           </div>
         </div>
       </div>
+
+      {/* MODAL DE POLÍTICA DE TRATAMIENTO DE DATOS PERSONALES */}
+      {showPolicy && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4 backdrop-blur-sm">
+          <div className="relative max-h-[90vh] w-full max-w-3xl overflow-y-auto rounded-3xl bg-white p-6 text-slate-900 shadow-2xl sm:p-10">
+            {/* Botón flotante para cerrar */}
+            <button
+              onClick={() => setShowPolicy(false)}
+              className="absolute top-6 right-6 flex h-10 w-10 items-center justify-center rounded-full bg-slate-100 text-slate-600 transition-colors hover:bg-slate-200 hover:text-slate-900"
+            >
+              ✕
+            </button>
+
+            <div className="space-y-6 pr-2">
+              <div>
+                <span className="text-xs font-bold tracking-widest text-[#ff5743] uppercase">
+                  InShelf
+                </span>
+                <h2 className="text-2xl font-extrabold text-[#152136] sm:text-3xl">
+                  POLÍTICA DE TRATAMIENTO DE DATOS PERSONALES
+                </h2>
+              </div>
+
+              <div className="rounded-2xl bg-slate-50 p-4 text-xs text-slate-700 sm:text-sm">
+                <p className="mb-2 font-bold">
+                  Responsable del tratamiento de datos personales:
+                </p>
+                <ul className="space-y-1">
+                  <li>
+                    • <strong>Razón social:</strong> Mentorías Directivas S.A.S.
+                  </li>
+                  <li>
+                    • <strong>NIT:</strong> 901935534-2
+                  </li>
+                  <li>
+                    • <strong>Domicilio:</strong> Bogotá D. C., Colombia.
+                  </li>
+                  <li>
+                    • <strong>Dirección:</strong> Carrera 5 # 79-35, Bogotá D.
+                    C.
+                  </li>
+                  <li>
+                    • <strong>Correo electrónico:</strong>{' '}
+                    asisgerencia@mentodir.com
+                  </li>
+                  <li>
+                    • <strong>Teléfono:</strong> 314 636 1640
+                  </li>
+                </ul>
+              </div>
+
+              <div className="space-y-4 text-xs leading-relaxed text-slate-600 sm:text-sm">
+                <div>
+                  <h4 className="mb-1 font-bold text-[#152136]">
+                    1. Finalidad del tratamiento de los datos personales
+                  </h4>
+                  <p>
+                    Mentorías Directivas S.A.S., en calidad de responsable del
+                    tratamiento de los datos personales asociados a InShelf,
+                    podrá recolectar, almacenar, utilizar, actualizar y
+                    gestionar los datos personales suministrados por los
+                    usuarios a través de formularios, landing pages y demás
+                    canales de contacto, con las siguientes finalidades:
+                  </p>
+                  <ul className="mt-2 list-disc space-y-1 pl-5">
+                    <li>
+                      Contactar a los usuarios para responder sus solicitudes y
+                      consultas.
+                    </li>
+                    <li>
+                      Brindar información sobre InShelf, sus productos,
+                      servicios y soluciones.
+                    </li>
+                    <li>
+                      Realizar actividades de seguimiento comercial relacionadas
+                      con el interés manifestado por los usuarios.
+                    </li>
+                    <li>
+                      Enviar comunicaciones comerciales, publicidad,
+                      promociones, novedades y ofertas relacionadas con los
+                      productos y servicios.
+                    </li>
+                    <li>
+                      Gestionar las relaciones comerciales y mantener
+                      comunicación con clientes potenciales y clientes.
+                    </li>
+                  </ul>
+                  <p className="mt-2">
+                    Las comunicaciones podrán enviarse a través de los canales
+                    de contacto proporcionados por el titular, de acuerdo con la
+                    autorización otorgada.
+                  </p>
+                </div>
+
+                <div>
+                  <h4 className="mb-1 font-bold text-[#152136]">
+                    2. Derechos de los titulares de los datos
+                  </h4>
+                  <p>
+                    De conformidad con la Ley 1581 de 2012 y las normas que la
+                    reglamentan, los titulares de los datos personales tienen
+                    derecho a:
+                  </p>
+                  <ul className="mt-2 list-disc space-y-1 pl-5">
+                    <li>
+                      Conocer, actualizar y rectificar sus datos personales.
+                    </li>
+                    <li>
+                      Solicitar prueba de la autorización otorgada para el
+                      tratamiento de sus datos.
+                    </li>
+                    <li>
+                      Conocer el uso que se ha dado a sus datos personales.
+                    </li>
+                    <li>
+                      Presentar consultas y reclamos relacionados con el
+                      tratamiento de sus datos.
+                    </li>
+                    <li>
+                      Solicitar la revocatoria de la autorización o la supresión
+                      de sus datos cuando sea procedente conforme a la normativa
+                      aplicable.
+                    </li>
+                    <li>
+                      Acceder gratuitamente a sus datos personales objeto de
+                      tratamiento.
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h4 className="mb-1 font-bold text-[#152136]">
+                    3. Canales para consultas y reclamos
+                  </h4>
+                  <p>
+                    Para ejercer sus derechos, presentar consultas, formular
+                    reclamos o solicitar la actualización de sus datos
+                    personales, los titulares podrán comunicarse a través de los
+                    siguientes canales:
+                  </p>
+                  <p className="mt-1">
+                    <strong>Correo electrónico:</strong>{' '}
+                    asisgerencia@mentodir.com
+                    <br />
+                    <strong>Teléfono:</strong> 314 636 1640
+                  </p>
+                  <p className="mt-1">
+                    Las solicitudes serán atendidas de acuerdo con los
+                    procedimientos y plazos establecidos en la normativa
+                    colombiana aplicable.
+                  </p>
+                </div>
+
+                <div>
+                  <h4 className="mb-1 font-bold text-[#152136]">
+                    4. Autorización para el tratamiento de datos personales
+                  </h4>
+                  <p>
+                    Al marcar la casilla de autorización dispuesta en los
+                    formularios de InShelf, el titular declara que ha sido
+                    informado sobre el tratamiento de sus datos personales y
+                    autoriza a Mentorías Directivas S.A.S. a recolectarlos,
+                    almacenarlos, utilizarlos y tratarlos para las finalidades
+                    descritas en esta política, incluido el envío de información
+                    comercial, publicidad, promociones y novedades, según el
+                    alcance de la autorización otorgada.
+                  </p>
+                  <p className="mt-2">
+                    La autorización deberá ser previa, expresa e informada. El
+                    titular podrá solicitar su revocatoria o la supresión de sus
+                    datos cuando sea procedente, sin perjuicio de las
+                    obligaciones legales o contractuales aplicables.
+                  </p>
+                </div>
+
+                <div>
+                  <h4 className="mb-1 font-bold text-[#152136]">
+                    5. Legislación aplicable
+                  </h4>
+                  <p>
+                    Esta política se rige por la Ley 1581 de 2012, el Decreto
+                    1074 de 2015 y las demás normas colombianas aplicables en
+                    materia de protección de datos personales.
+                  </p>
+                  <p className="mt-2 text-xs text-slate-400">
+                    Última actualización: 27 de octubre del 2026
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex justify-end border-t border-slate-100 pt-4">
+                <button
+                  type="button"
+                  onClick={() => setShowPolicy(false)}
+                  className="rounded-xl bg-[#152136] px-6 py-2.5 text-sm font-bold text-white transition-colors hover:bg-slate-800"
+                >
+                  Entendido
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };

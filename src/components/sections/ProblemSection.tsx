@@ -8,7 +8,7 @@ export const ProblemSection: React.FC = () => {
         <div className="mb-10 max-w-3xl">
           <div className="mb-4 flex items-center gap-3">
             <span className="h-px w-8 bg-[#ff5743]"></span>
-            <span className="text-xs font-bold tracking-widest text-[#ff5743] uppercase">
+            <span className="text-lg font-bold tracking-widest text-[#ff5743] uppercase">
               El Problema
             </span>
           </div>
@@ -30,9 +30,12 @@ export const ProblemSection: React.FC = () => {
         <div className="grid grid-cols-1 gap-10 divide-slate-300 md:grid-cols-3 md:gap-0 md:divide-x">
           {/* Tarjeta 1: El Reporte */}
           <div className="flex flex-col pt-4 md:pr-8 lg:pr-12">
-            <span className="mb-3 text-[10px] tracking-widest text-slate-400 uppercase">
-              El reporte
-            </span>
+            <div className="mb-3 inline-block w-fit rounded-md bg-[#ff5743] px-2.5 py-1 shadow-sm">
+              <span className="text-[12px] font-bold tracking-widest text-white uppercase">
+                El reporte
+              </span>
+            </div>
+
             <h3 className="mb-3 text-xl font-bold text-[#152136]">
               Te enteras del agotado cuando ya costó.
             </h3>
@@ -45,9 +48,12 @@ export const ProblemSection: React.FC = () => {
 
           {/* Tarjeta 2: La Visita */}
           <div className="flex flex-col pt-4 md:px-8 lg:px-12">
-            <span className="mb-3 text-[10px] tracking-widest text-slate-400 uppercase">
-              La visita
-            </span>
+            <div className="mb-3 inline-block w-fit rounded-md bg-[#ff5743] px-2.5 py-1 shadow-sm">
+              <span className="text-[12px] font-bold tracking-widest text-white uppercase">
+                La visita
+              </span>
+            </div>
+
             <h3 className="mb-3 text-xl font-bold text-[#152136]">
               Pagas visitas que no puedes verificar.
             </h3>
@@ -60,9 +66,12 @@ export const ProblemSection: React.FC = () => {
 
           {/* Tarjeta 3: El Sell-Out */}
           <div className="flex flex-col pt-4 md:pl-8 lg:pl-12">
-            <span className="mb-3 text-[10px] tracking-widest text-slate-400 uppercase">
-              El sell-out
-            </span>
+            <div className="mb-3 inline-block w-fit rounded-md bg-[#ff5743] px-2.5 py-1 shadow-sm">
+              <span className="text-[12px] font-bold tracking-widest text-white uppercase">
+                El sell-out
+              </span>
+            </div>
+
             <h3 className="mb-3 text-xl font-bold text-[#152136]">
               Explicas la caída. Nunca la anticipas.
             </h3>

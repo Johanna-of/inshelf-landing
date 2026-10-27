@@ -5,7 +5,6 @@ import { ExecutionSection } from '@/components/sections/SolutionSection';
 import { HowItWorksSection } from '@/components/sections/HowItWorksSection';
 import { ControlTowerSection } from '@/components/sections/ControlTowerSection';
 import { CalculatorSection } from '@/components/sections/CalculatorSection';
-import { HowWeWorkSection } from '@/components/sections/StrategicPartnership';
 import { FaqSection } from '@/components/sections/FaqSection';
 import { ContactSection } from '@/components/sections/ContactForm';
 import { Footer } from '@/components/sections/Footer';
@@ -16,13 +15,12 @@ function App() {
       <Header />
       <Banner />
       <ProblemSection />
-      <ExecutionSection />
       <HowItWorksSection />
       <ControlTowerSection />
       <CalculatorSection />
-      <HowWeWorkSection />
-      <FaqSection />
       <ContactSection />
+      <FaqSection />
+      <ExecutionSection />
       <Footer />
     </div>
   );
