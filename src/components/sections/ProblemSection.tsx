@@ -2,7 +2,7 @@ import React from 'react';
 
 export const ProblemSection: React.FC = () => {
   return (
-    <section className="border-b border-slate-200 bg-slate-50 px-4 py-20 text-slate-900 sm:px-8 lg:px-12">
+    <section className="border-b border-slate-200 bg-slate-100 px-4 py-20 text-slate-900 sm:px-8 lg:px-12">
       <div className="mx-auto max-w-7xl">
         {/* Cabecera de la sección */}
         <div className="mb-10 max-w-3xl">

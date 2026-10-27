@@ -78,7 +78,7 @@ export const CalculatorSection: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12">
             {/* LADO IZQUIERDO: CONTROLES */}
             <div className="flex flex-col justify-start px-8 py-8 sm:px-10 sm:py-10 lg:col-span-6">
-              <div className="mt-9 mb-8 inline-block w-fit rounded-lg bg-slate-100/80 px-3.5 py-1.5 text-xs font-medium text-slate-500">
+              <div className="mt-9 mb-8 inline-block w-fit rounded-lg bg-slate-100/80 px-3.5 py-1.5 text-base font-medium text-slate-500">
                 Valores de ejemplo. Cámbialos por los de tu operación.
               </div>
 
