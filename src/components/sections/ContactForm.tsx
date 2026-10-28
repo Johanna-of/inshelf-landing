@@ -201,8 +201,8 @@ export const ContactSection: React.FC = () => {
                     <span className="font-bold text-[#152136]">
                       {formData.name}
                     </span>
-                    . Te hemos enviado un correo de confirmación y te
-                    escribiremos a la brevedad para coordinar la sesión.
+                    . En breve nos comunicaremos contigo para coordinar los
+                    detalles de la reunión y revisar tu operación.
                   </p>
                 </div>
               ) : (
